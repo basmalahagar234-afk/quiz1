@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  gap: 20px;
+}
+
+.hero-card {
+  width: 240px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* =========================
+   GRID SECTION
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px 0;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* =========================
+   HOVER STYLES
+========================= */
+
+.btn:hover {
+  background: black;
+  color: white;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+/* =========================
+   TABLET BREAKPOINT
+   601px - 900px
+========================= */
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   MOBILE BREAKPOINT
+   0px - 600px
+========================= */
+
+@media (max-width: 600px) {
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav {
+    margin-top: 10px;
+  }
+
+  .nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-card {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
